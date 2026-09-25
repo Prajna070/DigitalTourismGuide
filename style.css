@@ -1,0 +1,1210 @@
+/* ==========================================
+   GLOBAL
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f6f8fb;
+    color: #263238;
+    line-height: 1.6;
+}
+
+section {
+    scroll-margin-top: 20px;
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+header {
+    background: linear-gradient(135deg, #0d47a1, #1565c0);
+    color: white;
+    text-align: center;
+    padding: 28px 20px 20px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+    color: white;
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+header p {
+    color: #e3f2fd;
+    font-size: 15px;
+}
+
+
+/* ==========================================
+   NAVIGATION
+========================================== */
+
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 5px;
+    padding: 8px 13px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.18);
+    color: #ffeb3b;
+}
+
+
+/* ==========================================
+   MOBILE MENU
+========================================== */
+
+.menu-button {
+    display: none;
+
+    background: white;
+    color: #0d47a1;
+
+    border: none;
+    padding: 10px 18px;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    margin: 15px auto 0;
+}
+
+
+/* ==========================================
+   HERO
+========================================== */
+
+.hero {
+    min-height: 520px;
+
+    background:
+        linear-gradient(
+            rgba(0, 25, 70, 0.55),
+            rgba(0, 25, 70, 0.55)
+        ),
+        url("images/mysore-palace.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 70px 20px;
+}
+
+.hero h2 {
+    color: white;
+    font-size: 58px;
+    font-weight: 700;
+
+    text-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.4);
+
+    margin-bottom: 12px;
+}
+
+.hero p {
+    color: white;
+    font-size: 20px;
+    max-width: 700px;
+
+    margin-bottom: 30px;
+}
+
+#searchBox {
+    width: 90%;
+    max-width: 650px;
+
+    padding: 17px 24px;
+
+    border: 3px solid rgba(255, 255, 255, 0.5);
+
+    border-radius: 35px;
+
+    font-size: 17px;
+
+    outline: none;
+
+    background: white;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.25);
+
+    transition: 0.3s;
+}
+
+#searchBox:focus {
+    border-color: #90caf9;
+    transform: scale(1.02);
+}
+
+
+/* ==========================================
+   SECTION HEADINGS
+========================================== */
+
+.about h2,
+.categories h2,
+.places-section h2,
+.tourist-map h2,
+.services h2,
+.events h2,
+.contact h2 {
+    color: #0d47a1;
+
+    text-align: center;
+
+    font-size: 30px;
+
+    margin-bottom: 30px;
+}
+
+.about h2::after,
+.categories h2::after,
+.places-section h2::after,
+.tourist-map h2::after,
+.services h2::after,
+.events h2::after,
+.contact h2::after {
+    content: "";
+
+    display: block;
+
+    width: 55px;
+    height: 4px;
+
+    background: #ffb300;
+
+    border-radius: 5px;
+
+    margin: 10px auto 0;
+}
+
+
+/* ==========================================
+   ABOUT
+========================================== */
+
+.about {
+    padding: 65px 7%;
+    background: #eaf4ff;
+    text-align: center;
+}
+
+.about > p {
+    max-width: 850px;
+
+    margin: 0 auto 35px;
+
+    color: #455a64;
+
+    font-size: 16px;
+}
+
+.about-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 25px;
+
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+.about-card {
+    background: white;
+
+    padding: 30px 22px;
+
+    border-radius: 14px;
+
+    border: 1px solid #e1e8ef;
+
+    box-shadow:
+        0 5px 18px rgba(13, 71, 161, 0.08);
+
+    transition: 0.3s;
+}
+
+.about-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 10px 25px rgba(13, 71, 161, 0.15);
+}
+
+.about-card h3 {
+    color: #1565c0;
+
+    margin-bottom: 12px;
+}
+
+.about-card p {
+    color: #455a64;
+}
+
+
+/* ==========================================
+   CATEGORIES
+========================================== */
+
+.categories {
+    padding: 65px 7%;
+    background: white;
+    text-align: center;
+}
+
+.category-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(210px, 1fr));
+
+    gap: 25px;
+
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+.category-card {
+    background: #f8fbff;
+
+    padding: 30px 20px;
+
+    border-radius: 14px;
+
+    border: 1px solid #e0e7ef;
+
+    transition: 0.3s;
+}
+
+.category-card:hover {
+    transform: translateY(-7px);
+
+    background: #eaf4ff;
+
+    box-shadow:
+        0 8px 20px rgba(13, 71, 161, 0.12);
+}
+
+.category-card div {
+    font-size: 45px;
+
+    margin-bottom: 10px;
+}
+
+.category-card h3 {
+    color: #1565c0;
+
+    margin-bottom: 8px;
+}
+
+.category-card p {
+    color: #546e7a;
+}
+
+
+/* ==========================================
+   TOURIST PLACES
+========================================== */
+
+.places-section {
+    padding: 65px 7%;
+    background: #f6f8fb;
+}
+
+.places-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 28px;
+
+    max-width: 1250px;
+
+    margin: auto;
+}
+
+.place-card {
+    background: white;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    border: 1px solid #e1e7ee;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.08);
+
+    transition: 0.35s;
+}
+
+.place-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 12px 30px rgba(13, 71, 161, 0.18);
+}
+
+.place-card img {
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: 0.4s;
+}
+
+.place-card:hover img {
+    transform: scale(1.04);
+}
+
+.place-content {
+    padding: 22px;
+
+    background: white;
+}
+
+.place-content h3 {
+    color: #0d47a1;
+
+    font-size: 22px;
+
+    margin-bottom: 12px;
+}
+
+.place-content p {
+    color: #455a64;
+
+    margin-bottom: 9px;
+}
+
+.place-content strong {
+    color: #263238;
+}
+
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.route-button,
+.details-button {
+    display: inline-block;
+
+    padding: 10px 15px;
+
+    margin-top: 8px;
+    margin-right: 5px;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.route-button {
+    background: #1565c0;
+
+    color: white !important;
+}
+
+.route-button:hover {
+    background: #0d47a1;
+
+    transform: translateY(-2px);
+}
+
+.details-button {
+    background: #2e7d32;
+
+    color: white !important;
+
+    border: none;
+
+    font-family: inherit;
+
+    font-weight: 600;
+}
+
+.details-button:hover {
+    background: #1b5e20;
+
+    transform: translateY(-2px);
+}
+
+
+/* ==========================================
+   TOURIST MAP
+========================================== */
+
+.tourist-map {
+    padding: 65px 7%;
+
+    background: white;
+
+    text-align: center;
+}
+
+.tourist-map > p {
+    color: #546e7a;
+
+    margin-bottom: 30px;
+}
+
+.map-buttons {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(210px, 1fr));
+
+    gap: 18px;
+
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+.map-buttons a {
+    display: block;
+
+    padding: 17px;
+
+    background: #f8fbff;
+
+    color: #1565c0;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    border-radius: 10px;
+
+    border: 1px solid #dce6f0;
+
+    transition: 0.3s;
+}
+
+.map-buttons a:hover {
+    background: #1565c0;
+
+    color: white;
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 7px 18px rgba(13, 71, 161, 0.2);
+}
+
+
+/* ==========================================
+   SERVICES
+========================================== */
+
+.services {
+    padding: 65px 7%;
+
+    background: #eaf4ff;
+}
+
+.services-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 25px;
+
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+.service-card {
+    background: white;
+
+    padding: 30px 20px;
+
+    text-align: center;
+
+    border-radius: 14px;
+
+    border: 1px solid #dce6f0;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.07);
+
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 10px 25px rgba(13, 71, 161, 0.15);
+}
+
+.service-icon {
+    font-size: 45px;
+
+    margin-bottom: 12px;
+}
+
+.service-card h3 {
+    color: #1565c0;
+
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    color: #546e7a;
+
+    margin-bottom: 15px;
+}
+
+
+/* ==========================================
+   EVENTS
+========================================== */
+
+.events {
+    padding: 65px 7%;
+
+    background: #f6f8fb;
+}
+
+.events-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 25px;
+
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+.event-card {
+    background: white;
+
+    padding: 28px;
+
+    border-radius: 14px;
+
+    border-left: 5px solid #1565c0;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.07);
+
+    transition: 0.3s;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+}
+
+.event-card h3 {
+    color: #1565c0;
+
+    margin-bottom: 12px;
+}
+
+.event-card p {
+    color: #546e7a;
+
+    margin-bottom: 8px;
+}
+
+.event-card strong {
+    color: #263238;
+}
+
+
+/* ==========================================
+   CONTACT
+========================================== */
+
+.contact {
+    padding: 65px 7%;
+
+    background: #eaf4ff;
+
+    text-align: center;
+}
+
+.contact > p {
+    color: #546e7a;
+
+    margin-bottom: 25px;
+}
+
+#feedbackForm {
+    max-width: 650px;
+
+    margin: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+#feedbackForm input,
+#feedbackForm textarea {
+    width: 100%;
+
+    padding: 15px;
+
+    border: 1px solid #cfd8dc;
+
+    border-radius: 9px;
+
+    font-size: 16px;
+
+    font-family: inherit;
+
+    background: white;
+
+    transition: 0.3s;
+}
+
+#feedbackForm input:focus,
+#feedbackForm textarea:focus {
+    outline: none;
+
+    border-color: #1565c0;
+
+    box-shadow:
+        0 0 0 3px rgba(21, 101, 192, 0.1);
+}
+
+#feedbackForm button {
+    padding: 15px;
+
+    background: #1565c0;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 9px;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#feedbackForm button:hover {
+    background: #0d47a1;
+
+    transform: translateY(-2px);
+}
+
+#feedbackMessage {
+    margin-top: 15px;
+
+    color: #2e7d32;
+
+    font-weight: bold;
+}
+
+
+/* ==========================================
+   DETAILS MODAL
+========================================== */
+
+.modal {
+    display: none;
+
+    position: fixed;
+
+    z-index: 9999;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.65);
+
+    backdrop-filter: blur(3px);
+}
+
+.modal-content {
+    background: white;
+
+    color: #263238;
+
+    width: 90%;
+
+    max-width: 650px;
+
+    max-height: 88vh;
+
+    overflow-y: auto;
+
+    margin: 4% auto;
+
+    padding: 35px;
+
+    border-radius: 16px;
+
+    position: relative;
+
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.3);
+
+    animation: modalOpen 0.25s ease;
+}
+
+@keyframes modalOpen {
+
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-content h2 {
+    color: #0d47a1;
+
+    font-size: 28px;
+
+    margin-bottom: 15px;
+}
+
+.modal-content p {
+    color: #455a64;
+
+    margin-bottom: 15px;
+}
+
+.modal-content strong {
+    color: #263238;
+}
+
+
+/* ==========================================
+   GALLERY
+========================================== */
+
+.modal-gallery {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(140px, 1fr));
+
+    gap: 12px;
+
+    margin: 20px 0;
+}
+
+.modal-gallery img {
+    width: 100%;
+
+    height: 140px;
+
+    object-fit: cover;
+
+    border-radius: 9px;
+
+    border: 1px solid #e0e0e0;
+
+    transition: 0.3s;
+}
+
+.modal-gallery img:hover {
+    transform: scale(1.03);
+}
+
+
+/* ==========================================
+   RATING
+========================================== */
+
+.rating-section {
+    margin: 25px 0;
+
+    padding: 22px;
+
+    background: #f4f8fc;
+
+    border-radius: 12px;
+
+    text-align: center;
+}
+
+.rating-section h3 {
+    color: #1565c0;
+
+    margin-bottom: 12px;
+}
+
+.stars {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 5px;
+}
+
+.star {
+    background: none;
+
+    border: none;
+
+    font-size: 36px;
+
+    color: #cfd8dc;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.star:hover,
+.star.selected {
+    color: #ffb300;
+
+    transform: scale(1.1);
+}
+
+#ratingMessage {
+    margin-top: 10px;
+
+    color: #455a64;
+
+    font-weight: 600;
+}
+
+
+/* ==========================================
+   CLOSE BUTTON
+========================================== */
+
+.close-button {
+    position: absolute;
+
+    right: 15px;
+    top: 8px;
+
+    background: #f1f3f5;
+
+    border: none;
+
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+
+    font-size: 28px;
+
+    color: #455a64;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.close-button:hover {
+    background: #ffebee;
+
+    color: #d32f2f;
+}
+
+
+/* ==========================================
+   MODAL ROUTE
+========================================== */
+
+.modal-route-button {
+    display: inline-block;
+
+    margin-top: 8px;
+
+    padding: 12px 20px;
+
+    background: #1565c0;
+
+    color: white !important;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.modal-route-button:hover {
+    background: #0d47a1;
+
+    transform: translateY(-2px);
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer {
+    background:
+        linear-gradient(
+            135deg,
+            #0d47a1,
+            #08306b
+        );
+
+    color: white;
+
+    padding: 45px 7% 18px;
+}
+
+.footer-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 35px;
+
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+.footer-section h3 {
+    color: white;
+
+    margin-bottom: 15px;
+}
+
+.footer-section p {
+    color: #dcecff;
+
+    margin-bottom: 8px;
+}
+
+.footer-section a {
+    display: block;
+
+    color: #dcecff;
+
+    text-decoration: none;
+
+    margin-bottom: 8px;
+
+    transition: 0.2s;
+}
+
+.footer-section a:hover {
+    color: #ffeb3b;
+
+    padding-left: 4px;
+}
+
+.footer-bottom {
+    border-top:
+        1px solid rgba(255, 255, 255, 0.25);
+
+    margin-top: 30px;
+
+    padding-top: 15px;
+
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #dcecff;
+
+    margin: 5px;
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 22px 15px 18px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    header p {
+        font-size: 13px;
+    }
+
+
+    .menu-button {
+        display: block;
+    }
+
+
+    nav {
+        display: none;
+
+        margin-top: 10px;
+    }
+
+
+    nav.show {
+        display: block;
+    }
+
+
+    nav a {
+        display: block;
+
+        padding: 10px;
+
+        margin: 2px 0;
+
+        font-size: 14px;
+    }
+
+
+    .hero {
+        min-height: 400px;
+
+        padding: 50px 15px;
+    }
+
+
+    .hero h2 {
+        font-size: 38px;
+    }
+
+
+    .hero p {
+        font-size: 17px;
+    }
+
+
+    #searchBox {
+        width: 95%;
+
+        padding: 14px 18px;
+    }
+
+
+    .about,
+    .categories,
+    .places-section,
+    .tourist-map,
+    .services,
+    .events,
+    .contact {
+        padding: 45px 5%;
+    }
+
+
+    .about h2,
+    .categories h2,
+    .places-section h2,
+    .tourist-map h2,
+    .services h2,
+    .events h2,
+    .contact h2 {
+        font-size: 25px;
+    }
+
+
+    .place-card img {
+        height: 200px;
+    }
+
+
+    .modal-content {
+        width: 94%;
+
+        margin: 10% auto;
+
+        padding: 25px;
+
+        max-height: 82vh;
+    }
+
+
+    .modal-content h2 {
+        font-size: 23px;
+
+        padding-right: 30px;
+    }
+
+
+    .modal-gallery img {
+        height: 115px;
+    }
+
+
+    .star {
+        font-size: 31px;
+    }
+
+}
